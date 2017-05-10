@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Table {
     public String getName() {
@@ -13,25 +14,25 @@ public class Table {
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
-    public ArrayList getColumnNames() {
+    public List getColumnNames() {
         return columnNames;
     }
     public void setColumnNames(ArrayList columnNames) {
         this.columnNames = columnNames;
     }
-    public ArrayList getColumnTypes() {
+    public List getColumnTypes() {
         return columnTypes;
     }
     public void setColumnTypes(ArrayList columnTypes) {
         this.columnTypes = columnTypes;
     }
-    public ArrayList getPrimaryKeys() {
+    public List getPrimaryKeys() {
         return primaryKeys;
     }
     public void setPrimaryKeys(ArrayList primaryKeys) {
         this.primaryKeys = primaryKeys;
     }
-    public ArrayList getForeignKeys() {
+    public List getForeignKeys() {
         return foreignKeys;
     }
     public void setForeignKeys(ArrayList foreignKeys) {
@@ -60,8 +61,8 @@ public class Table {
     private String name;
     private int columnCount;
     private int lineCount;
-    private ArrayList columnNames;
-    private ArrayList columnTypes;
-    private ArrayList primaryKeys;
-    private ArrayList foreignKeys;
+    private List columnNames;
+    private List columnTypes;
+    private List primaryKeys;
+    private List foreignKeys;
 }
