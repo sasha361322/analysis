@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        Connector connector = new Connector("bank");
+        Connector connector = new Connector();
         System.out.println(connector.Done());
         System.out.println(connector.getTableNames());
         int cnt = connector.getTableNames().size();

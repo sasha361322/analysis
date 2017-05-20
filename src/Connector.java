@@ -28,6 +28,10 @@ public class Connector {
         this(url, driver, null, null);
     }
 
+    Connector(){
+        this(null, null);
+    }
+
     public boolean Done() {
         return res;
     }
@@ -71,7 +75,7 @@ public class Connector {
             table.setForeignKeys(fkeys);
 
             //getting line count
-            Statement st = cn.createStatement();
+            Statement st = connection.createStatement();
             int lineCount = 0;
             rs = st.executeQuery("select count(*) from " + tablename);
             while (rs.next()) {
@@ -99,29 +103,20 @@ public class Connector {
 
             //getting column names
             ArrayList names = new ArrayList();
-            names = new ArrayList();
             for (int i = 0; i < columnCount; i++) {
                 names.add(md.getColumnName(i + 1));
             }
             table.setColumnNames(names);
 
         } catch (Exception ex) {
-            //ex.printStackTrace();
-        } finally {
-            try {
-                if (cn != null) {
-                    cn.close();
-                }
-            } catch (SQLException ex) {
-                //ex.printStackTrace();
-            }
+            ex.printStackTrace();
         }
         return table;
     }
 
 
-    private String url= "jdbc:mysql://localhost:3306/";
-    private Driver driver = Driver.h2;
+    private String url= "jdbc:mysql://localhost:3306/paperoll";
+    private Driver driver = Driver.mysql;
     private String usr = "root";
     private String pwd = "";
     private Connection connection = null;
