@@ -1,4 +1,4 @@
-package Utils;
+package ru.shipilov.utils;
 
 public enum Driver {
     mysql("com.mysql.jdbc.Driver"),
