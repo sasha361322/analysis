@@ -18,10 +18,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="analysis" />
+        <module name="Курсовая1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="analysis" target="1.8" />
+      <module name="Курсовая1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

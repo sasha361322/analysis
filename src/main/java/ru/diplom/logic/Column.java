@@ -1,4 +1,4 @@
-package ru.shipilov.logic;
+package ru.diplom.logic;
 
 public class Column {
     private String name;

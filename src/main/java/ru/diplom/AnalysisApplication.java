@@ -1,4 +1,4 @@
-package ru.shipilov;
+package ru.diplom;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
